@@ -7,459 +7,600 @@
 <meta property="og:title" content="Alexandre Guitars">
 <meta property="og:description" content="Reparo · Customização · Manutenção de instrumentos de corda em São Paulo.">
 <meta property="og:image" content="https://alexandreguitars.com.br/og-image.jpg">
+
 <title>Alexandre Guitars — Links</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+
 <style>
-* { box-sizing:border-box; margin:0; padding:0; }
 
-:root {
-  --amber:  #E8890A;
-  --burnt:  #C8511A;
-  --dark:   #8B3A0A;
-  --blk:    #1a0500;
-  --bg:     #0C0702;
-  --surf:   #1a1008;
-  --surf2:  #231508;
-  --cream:  #F0E6D0;
-  --dim:    #B89A70;
-  --muted:  #7A5C3A;
-  --border: #2E1A08;
-  --bord2:  #3E2410;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html, body {
-  min-height: 100vh;
-  background: var(--bg);
-  color: var(--cream);
-  font-family: 'Libre Baskerville', Georgia, serif;
+:root{
+  --amber:#E8890A;
+  --burnt:#C8511A;
+  --bg:#0C0702;
+  --surf:#1a1008;
+  --surf2:#231508;
+  --cream:#F0E6D0;
+  --dim:#B89A70;
+  --muted:#7A5C3A;
+  --border:#2E1A08;
+  --bord2:#3E2410;
 }
 
-/* grain */
-body::before {
-  content: '';
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
-  opacity: 0.7;
+html,body{
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--cream);
+  font-family:'Libre Baskerville',serif;
 }
 
-/* sunburst glow */
-body::after {
-  content: '';
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background: radial-gradient(ellipse 70% 50% at 50% 0%,
+/* GRAIN */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.7;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+}
+
+/* SUNBURST */
+body::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+  radial-gradient(
+    ellipse 70% 50% at 50% 0%,
     rgba(232,137,10,0.18) 0%,
     rgba(200,81,26,0.10) 40%,
     transparent 70%
   );
 }
 
-.wrap {
-  position: relative; z-index: 1;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 3rem 1.25rem 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+.wrap{
+  position:relative;
+  z-index:1;
+  max-width:480px;
+  margin:0 auto;
+  padding:3rem 1.25rem 5rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* ── AVATAR ── */
-.avatar {
-  width: 96px; height: 96px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at 40% 35%,
-    #E8890A 0%, #C8511A 50%, #1a0500 100%
+/* AVATAR */
+
+.avatar{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  background:
+  radial-gradient(
+    ellipse at 40% 35%,
+    #E8890A 0%,
+    #C8511A 50%,
+    #1a0500 100%
   );
-  border: 2px solid var(--burnt);
-  box-shadow: 0 0 0 4px rgba(200,81,26,0.15), 0 8px 32px rgba(0,0,0,0.5);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  margin-bottom: 1.25rem;
-  flex-shrink: 0;
-}
-.avatar-mono {
-  font-family: 'Special Elite', monospace;
-  font-size: 28px; color: var(--cream); letter-spacing: 2px; line-height: 1;
-}
-.avatar-line { width: 40px; height: 0.5px; background: rgba(240,230,208,0.4); margin: 3px 0; }
-.avatar-sub {
-  font-family: 'Special Elite', monospace;
-  font-size: 7px; color: rgba(240,230,208,0.7); letter-spacing: 4px;
+
+  border:2px solid var(--burnt);
+
+  box-shadow:
+  0 0 0 4px rgba(200,81,26,.15),
+  0 8px 32px rgba(0,0,0,.5);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  margin-bottom:1.25rem;
 }
 
-/* ── IDENTITY ── */
-.identity { text-align: center; margin-bottom: 1.75rem; }
-.ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 6px; }
-.ornament .line { width: 40px; height: 0.5px; background: var(--burnt); opacity: 0.5; }
-.ornament .star { color: var(--burnt); font-size: 11px; }
-.brand-name {
-  font-family: 'Special Elite', monospace;
-  font-size: 28px; letter-spacing: 0.06em; color: var(--cream); line-height: 1;
-}
-.brand-sub {
-  font-family: 'Special Elite', monospace;
-  font-size: 11px; letter-spacing: 0.22em; color: var(--burnt); margin-top: 3px;
-}
-.brand-tag {
-  font-size: 12px; color: var(--dim); margin-top: 10px; line-height: 1.6;
-  letter-spacing: 0.02em;
-}
-.location {
-  display: inline-flex; align-items: center; gap: 4px;
-  font-family: 'Special Elite', monospace; font-size: 10px;
-  color: var(--muted); letter-spacing: 0.1em; margin-top: 6px;
+.avatar-mono{
+  font-family:'Special Elite',monospace;
+  font-size:28px;
+  letter-spacing:2px;
 }
 
-/* ── LINKS ── */
-.links { width: 100%; display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.75rem; }
-
-.link-btn {
-  display: flex; align-items: center; gap: 14px;
-  width: 100%; padding: 14px 18px;
-  background: var(--surf);
-  border: 0.5px solid var(--bord2);
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--cream);
-  transition: all 0.2s;
-  position: relative;
-  overflow: hidden;
-}
-.link-btn::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(232,137,10,0.06) 0%, transparent 60%);
-  opacity: 0; transition: opacity 0.2s;
-}
-.link-btn:hover {
-  border-color: var(--burnt);
-  background: var(--surf2);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-.link-btn:hover::before { opacity: 1; }
-.link-btn:active { transform: translateY(0); }
-
-.link-btn.primary {
-  border-color: var(--burnt);
-  background: linear-gradient(135deg, rgba(200,81,26,0.2) 0%, rgba(232,137,10,0.08) 100%);
-}
-.link-btn.primary:hover {
-  background: linear-gradient(135deg, rgba(200,81,26,0.35) 0%, rgba(232,137,10,0.15) 100%);
-  box-shadow: 0 6px 24px rgba(200,81,26,0.25);
+.avatar-line{
+  width:40px;
+  height:.5px;
+  background:rgba(240,230,208,.4);
+  margin:3px 0;
 }
 
-.link-icon {
-  width: 38px; height: 38px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
-  background: var(--surf2); border: 0.5px solid var(--border);
-}
-.link-btn.primary .link-icon { background: rgba(200,81,26,0.2); border-color: var(--burnt); }
-
-.link-text { flex: 1; }
-.link-title {
-  font-family: 'Special Elite', monospace;
-  font-size: 13px; letter-spacing: 0.06em; color: var(--cream); line-height: 1;
-}
-.link-desc { font-size: 11px; color: var(--muted); margin-top: 3px; line-height: 1.4; }
-.link-arrow {
-  font-family: 'Special Elite', monospace;
-  font-size: 16px; color: var(--burnt); opacity: 0.6;
-  transition: opacity 0.2s, transform 0.2s;
-}
-.link-btn:hover .link-arrow { opacity: 1; transform: translateX(3px); }
-
-/* ── DIVIDER ── */
-.divider {
-  display: flex; align-items: center; gap: 10px;
-  width: 100%; margin: 4px 0;
-}
-.divider::before, .divider::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
-.divider span {
-  font-family: 'Special Elite', monospace; font-size: 8px;
-  letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; white-space: nowrap;
+.avatar-sub{
+  font-family:'Special Elite',monospace;
+  font-size:7px;
+  letter-spacing:4px;
+  color:rgba(240,230,208,.7);
 }
 
-/* ── SOCIALS ── */
-.socials { display: flex; gap: 10px; margin-bottom: 1.75rem; }
-.social-btn {
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-  padding: 9px 16px; border-radius: 20px;
-  border: 0.5px solid var(--bord2); background: var(--surf);
-  text-decoration: none; color: var(--dim);
-  font-family: 'Special Elite', monospace; font-size: 11px; letter-spacing: 0.06em;
-  transition: all 0.2s;
-}
-.social-btn:hover { border-color: var(--burnt); color: var(--cream); background: var(--surf2); }
-.social-btn .s-icon { font-size: 15px; }
+/* IDENTIDADE */
 
-/* ── HORÁRIOS ── */
-.horarios {
-  width: 100%;
-  background: var(--surf); border: 0.5px solid var(--border); border-radius: 6px;
-  padding: 14px 16px; margin-bottom: 1.75rem;
+.identity{
+  text-align:center;
+  margin-bottom:1.75rem;
 }
-.hor-title {
-  font-family: 'Special Elite', monospace; font-size: 8px;
-  letter-spacing: 0.22em; color: var(--burnt); text-transform: uppercase;
-  margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
-}
-.hor-title::after { content: ''; flex: 1; height: 0.4px; background: var(--border); }
-.hor-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 6px 0; border-bottom: 0.5px solid var(--border);
-}
-.hor-row:last-child { border-bottom: none; }
-.hor-dia { font-size: 12px; color: var(--dim); font-family: 'Special Elite', monospace; letter-spacing: 0.04em; }
-.hor-hora { font-family: 'Special Elite', monospace; font-size: 12px; color: var(--cream); }
-.hor-hora.off { color: var(--muted); }
-.hor-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #5DCAA5; box-shadow: 0 0 6px rgba(93,202,165,0.5);
-}
-.hor-dot.off { background: var(--muted); box-shadow: none; }
 
-/* ── FOOTER ── */
-.footer {
-  text-align: center; width: 100%;
-  border-top: 0.5px solid var(--border); padding-top: 1.25rem;
+.ornament{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:6px;
 }
-.footer-ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; }
-.footer-ornament .line { width: 40px; height: 0.5px; background: var(--border); }
-.footer-ornament .star { color: var(--muted); font-size: 9px; }
-.footer-copy {
-  font-family: 'Special Elite', monospace; font-size: 9px;
-  color: var(--muted); letter-spacing: 0.1em; line-height: 1.9;
-}
-.footer-copy a { color: var(--muted); text-decoration: none; }
-.footer-copy a:hover { color: var(--burnt); }
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity:0; transform: translateY(16px); }
-  to   { opacity:1; transform: translateY(0); }
+.ornament .line{
+  width:40px;
+  height:.5px;
+  background:var(--burnt);
+  opacity:.5;
 }
-.avatar      { animation: fadeUp 0.5s ease forwards; }
-.identity    { animation: fadeUp 0.5s ease forwards 0.1s; opacity:0; }
-.links       { animation: fadeUp 0.5s ease forwards 0.2s; opacity:0; }
-.socials     { animation: fadeUp 0.5s ease forwards 0.3s; opacity:0; }
-.horarios    { animation: fadeUp 0.5s ease forwards 0.35s; opacity:0; }
-.footer      { animation: fadeUp 0.5s ease forwards 0.4s; opacity:0; }
 
-/* ── STATUS BADGE ── */
-.status-badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  background: rgba(93,202,165,0.1); border: 0.5px solid rgba(93,202,165,0.3);
-  border-radius: 20px; padding: 3px 10px; margin-top: 8px;
-  font-family: 'Special Elite', monospace; font-size: 9px;
-  letter-spacing: 0.1em; color: #5DCAA5;
+.brand-name{
+  font-family:'Special Elite',monospace;
+  font-size:28px;
+  letter-spacing:.06em;
 }
-.status-dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: #5DCAA5; animation: pulse 2s ease infinite;
+
+.brand-sub{
+  font-family:'Special Elite',monospace;
+  font-size:11px;
+  letter-spacing:.22em;
+  color:var(--burnt);
+  margin-top:3px;
 }
-@keyframes pulse {
-  0%,100% { opacity:1; }
-  50% { opacity:0.3; }
+
+.brand-tag{
+  font-size:12px;
+  color:var(--dim);
+  margin-top:10px;
+  line-height:1.6;
 }
+
+.location{
+  margin-top:8px;
+  font-family:'Special Elite',monospace;
+  font-size:10px;
+  color:var(--muted);
+}
+
+/* STATUS */
+
+.status-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+
+  background:rgba(93,202,165,.1);
+
+  border:.5px solid rgba(93,202,165,.3);
+
+  border-radius:20px;
+
+  padding:3px 10px;
+
+  margin-top:8px;
+
+  font-family:'Special Elite',monospace;
+  font-size:9px;
+  letter-spacing:.1em;
+
+  color:#5DCAA5;
+}
+
+.status-dot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#5DCAA5;
+}
+
+/* LINKS */
+
+.links{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:1.75rem;
+}
+
+.link-btn{
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  width:100%;
+  padding:14px 18px;
+
+  background:var(--surf);
+
+  border:.5px solid var(--bord2);
+
+  border-radius:6px;
+
+  text-decoration:none;
+
+  color:var(--cream);
+
+  transition:.2s;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.link-btn:hover{
+  border-color:var(--burnt);
+  background:var(--surf2);
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 6px 20px rgba(0,0,0,.3);
+}
+
+.link-btn.primary{
+  border-color:var(--burnt);
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(200,81,26,.2) 0%,
+    rgba(232,137,10,.08) 100%
+  );
+}
+
+.link-icon{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:18px;
+
+  background:var(--surf2);
+
+  border:.5px solid var(--border);
+}
+
+.link-text{
+  flex:1;
+}
+
+.link-title{
+  font-family:'Special Elite',monospace;
+  font-size:13px;
+  letter-spacing:.06em;
+}
+
+.link-desc{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:3px;
+}
+
+.link-arrow{
+  font-size:16px;
+  color:var(--burnt);
+}
+
+/* DIVIDER */
+
+.divider{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  margin:4px 0;
+}
+
+.divider::before,
+.divider::after{
+  content:'';
+  flex:1;
+  height:.5px;
+  background:var(--border);
+}
+
+.divider span{
+  font-family:'Special Elite',monospace;
+  font-size:8px;
+  letter-spacing:.2em;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+
+/* SOCIAL */
+
+.socials{
+  display:flex;
+  gap:10px;
+  margin-bottom:1.75rem;
+}
+
+.social-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+
+  padding:9px 16px;
+
+  border-radius:20px;
+
+  border:.5px solid var(--bord2);
+
+  background:var(--surf);
+
+  text-decoration:none;
+
+  color:var(--dim);
+
+  font-family:'Special Elite',monospace;
+  font-size:11px;
+}
+
+.social-btn:hover{
+  border-color:var(--burnt);
+  background:var(--surf2);
+  color:var(--cream);
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  width:100%;
+  border-top:.5px solid var(--border);
+  padding-top:1.25rem;
+}
+
+.footer-copy{
+  font-family:'Special Elite',monospace;
+  font-size:9px;
+  color:var(--muted);
+  line-height:1.9;
+}
+
+.footer-copy a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
 </style>
 </head>
+
 <body>
+
 <div class="wrap">
 
   <!-- AVATAR -->
+
   <div class="avatar">
     <div class="avatar-mono">AG</div>
     <div class="avatar-line"></div>
     <div class="avatar-sub">GUITARS</div>
   </div>
 
-  <!-- IDENTITY -->
+  <!-- IDENTIDADE -->
+
   <div class="identity">
+
     <div class="ornament">
       <div class="line"></div>
-      <div class="star">✦</div>
+      ✦
       <div class="line"></div>
     </div>
+
     <div class="brand-name">Alexandre</div>
+
     <div class="brand-sub">G u i t a r s</div>
-    <div class="brand-tag">Reparo · Customização · Manutenção<br>de instrumentos de corda</div>
-    <div class="location">📍 São Paulo, SP</div>
+
+    <div class="brand-tag">
+      Reparo · Customização · Manutenção<br>
+      de instrumentos de corda
+    </div>
+
+    <div class="location">
+      📍 São Paulo, SP
+    </div>
+
     <div class="status-badge">
       <div class="status-dot"></div>
       Aceitando novos clientes
     </div>
+
   </div>
 
-  <!-- LINKS PRINCIPAIS -->
+  <!-- LINKS -->
+
   <div class="links">
 
-    <a href="https://wa.me/5511945857792" target="_blank" class="link-btn primary">
+    <!-- WHATSAPP -->
+
+    <a href="https://wa.me/5511945857792"
+       target="_blank"
+       class="link-btn primary">
+
       <div class="link-icon">💬</div>
+
       <div class="link-text">
-        <div class="link-title">Pedir Orçamento</div>
-        <div class="link-desc">Fale direto pelo WhatsApp · Resposta rápida</div>
+        <div class="link-title">
+          Entrar em contato
+        </div>
+
+        <div class="link-desc">
+          WhatsApp · Resposta rápida
+        </div>
       </div>
+
       <div class="link-arrow">→</div>
+
     </a>
 
-    <a href="Alexandre_Guitars_Orcamento_Digital.html" target="_blank" class="link-btn">
-      <div class="link-icon">📋</div>
-      <div class="link-text">
-        <div class="link-title">Formulário de Orçamento</div>
-        <div class="link-desc">Selecione os serviços e calcule o valor</div>
-      </div>
-      <div class="link-arrow">→</div>
-    </a>
+    <!-- SITE -->
 
-    <a href="Alexandre_Guitars_Site.html" target="_blank" class="link-btn">
+    <a href="Alexandre_Guitars_Site.html"
+       target="_blank"
+       class="link-btn">
+
       <div class="link-icon">🌐</div>
+
       <div class="link-text">
         <div class="link-title">Nosso Site</div>
-        <div class="link-desc">Veja todos os serviços e informações</div>
+
+        <div class="link-desc">
+          Veja todos os serviços e informações
+        </div>
       </div>
+
       <div class="link-arrow">→</div>
+
     </a>
 
-    <div class="divider"><span>serviços</span></div>
+    <div class="divider">
+      <span>serviços</span>
+    </div>
 
-    <a href="pdf/tabela-servicos.pdf" target="_blank" class="link-btn">
+    <!-- PDF -->
+
+    <a href="pdf/tabela-servicos.pdf"
+       target="_blank"
+       class="link-btn">
+
       <div class="link-icon">📄</div>
+
       <div class="link-text">
-        <div class="link-title">Tabela de Serviços</div>
-        <div class="link-desc">Setup, trastes, elétrica, reparos e mais</div>
+        <div class="link-title">
+          Tabela de Serviços
+        </div>
+
+        <div class="link-desc">
+          Setup, trastes, elétrica, reparos e mais
+        </div>
       </div>
+
       <div class="link-arrow">→</div>
+
     </a>
 
-    <a href="https://wa.me/5511945857792?text=Ol%C3%A1!%20Quero%20agendar%20um%20horário%20para%20trazer%20meu%20instrumento." target="_blank" class="link-btn">
-      <div class="link-icon">📅</div>
+    <!-- RETIRADA -->
+
+    <a href="https://wa.me/5511945857792?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20a%20retirada%20do%20meu%20instrumento."
+       target="_blank"
+       class="link-btn">
+
+      <div class="link-icon">🚗</div>
+
       <div class="link-text">
-        <div class="link-title">Agendar Visita</div>
-        <div class="link-desc">Traga seu instrumento para avaliação gratuita</div>
+
+        <div class="link-title">
+          Retiro seu instrumento em sua casa
+        </div>
+
+        <div class="link-desc">
+          Consulte disponibilidade para sua região
+        </div>
+
       </div>
+
       <div class="link-arrow">→</div>
+
     </a>
 
-    <div class="divider"><span>contato</span></div>
+    <div class="divider">
+      <span>contato</span>
+    </div>
 
-    <a href="mailto:contato@alexandreguitars.com" class="link-btn">
+    <!-- EMAIL -->
+
+    <a href="mailto:contato@alexandreguitars.com"
+       class="link-btn">
+
       <div class="link-icon">✉️</div>
+
       <div class="link-text">
         <div class="link-title">E-mail</div>
-        <div class="link-desc">contato@alexandreguitars.com</div>
+
+        <div class="link-desc">
+          contato@alexandreguitars.com
+        </div>
       </div>
+
       <div class="link-arrow">→</div>
+
     </a>
 
   </div>
 
-  <!-- SOCIALS -->
+  <!-- SOCIAL -->
+
   <div class="socials">
-    <a href="https://instagram.com/alexandreguitars" target="_blank" class="social-btn">
-      <span class="s-icon">📸</span> Instagram
-    </a>
-    <a href="https://wa.me/5511945857792" target="_blank" class="social-btn">
-      <span class="s-icon">💬</span> WhatsApp
-    </a>
-    <a href="https://maps.google.com/?q=São+Paulo,+SP" target="_blank" class="social-btn">
-      <span class="s-icon">📍</span> Localização
-    </a>
-  </div>
 
-  <!-- HORÁRIOS -->
-  <div class="horarios">
-    <div class="hor-title">✦ Horário de atendimento</div>
-    <div class="hor-row">
-      <span class="hor-dia">Segunda – Sexta</span>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div class="hor-dot" id="dot-semana"></div>
-        <span class="hor-hora" id="hora-semana">9h – 19h</span>
-      </div>
-    </div>
-    <div class="hor-row">
-      <span class="hor-dia">Sábado</span>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div class="hor-dot" id="dot-sabado"></div>
-        <span class="hor-hora" id="hora-sabado">9h – 13h</span>
-      </div>
-    </div>
-    <div class="hor-row">
-      <span class="hor-dia">Domingo</span>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <div class="hor-dot off"></div>
-        <span class="hor-hora off">Fechado</span>
-      </div>
-    </div>
+    <a href="https://www.instagram.com/alexandreguitarsluthieria?igsh=MTd5N3Z1OWl3amdjaw=="
+       target="_blank"
+       class="social-btn">
+
+      📸 Instagram
+
+    </a>
+
+    <a href="https://wa.me/5511945857792"
+       target="_blank"
+       class="social-btn">
+
+      💬 WhatsApp
+
+    </a>
+
+    <a href="https://maps.google.com/?q=São+Paulo,+SP"
+       target="_blank"
+       class="social-btn">
+
+      📍 Localização
+
+    </a>
+
   </div>
 
   <!-- FOOTER -->
+
   <div class="footer">
-    <div class="footer-ornament">
-      <div class="line"></div>
-      <div class="star">✦</div>
-      <div class="line"></div>
-    </div>
+
     <div class="footer-copy">
-      © 2026 Alexandre Guitars · São Paulo, SP<br>
-      <a href="https://instagram.com/alexandreguitars" target="_blank">@alexandreguitars</a>
+
+      © 2026 Alexandre Guitars · São Paulo, SP
+      <br>
+
+      <a href="https://www.instagram.com/alexandreguitarsluthieria?igsh=MTd5N3Z1OWl3amdjaw=="
+         target="_blank">
+
+        @alexandreguitarsluthieria
+
+      </a>
+
       · Garantia de 30 dias em todos os serviços
+
     </div>
+
   </div>
 
 </div>
 
-<script>
-// ── STATUS DE ATENDIMENTO ── 
-// Verifica se está dentro do horário e acende o dot verde
-(function(){
-  const now = new Date();
-  const day = now.getDay(); // 0=dom, 1=seg...6=sab
-  const h   = now.getHours();
-  const m   = now.getMinutes();
-  const time = h + m/60;
-
-  const dotSemana = document.getElementById('dot-semana');
-  const dotSabado = document.getElementById('dot-sabado');
-  const horaSemana = document.getElementById('hora-semana');
-  const horaSabado = document.getElementById('hora-sabado');
-
-  // Seg-Sex: 9h-19h
-  if (day >= 1 && day <= 5 && time >= 9 && time < 19) {
-    dotSemana.style.background = '#5DCAA5';
-    dotSemana.style.boxShadow  = '0 0 6px rgba(93,202,165,0.6)';
-    horaSemana.textContent = '9h – 19h  ·  Aberto agora';
-  } else {
-    dotSemana.classList.add('off');
-    dotSemana.style.background = '#7A5C3A';
-    dotSemana.style.boxShadow  = 'none';
-  }
-
-  // Sab: 9h-13h
-  if (day === 6 && time >= 9 && time < 13) {
-    dotSabado.style.background = '#5DCAA5';
-    dotSabado.style.boxShadow  = '0 0 6px rgba(93,202,165,0.6)';
-    horaSabado.textContent = '9h – 13h  ·  Aberto agora';
-  } else {
-    dotSabado.classList.add('off');
-    dotSabado.style.background = '#7A5C3A';
-    dotSabado.style.boxShadow  = 'none';
-  }
-
-  // Status badge
-  const badge = document.querySelector('.status-badge');
-  const isOpen = (day >= 1 && day <= 5 && time >= 9 && time < 19) ||
-                 (day === 6 && time >= 9 && time < 13);
-  if (!isOpen) {
-    badge.style.background = 'rgba(122,92,58,0.1)';
-    badge.style.borderColor = 'rgba(122,92,58,0.3)';
-    badge.style.color = '#7A5C3A';
-    badge.querySelector('.status-dot').style.background = '#7A5C3A';
-    badge.querySelector('.status-dot').style.animation = 'none';
-    badge.lastChild.textContent = ' Fora do horário · Respondo em breve';
-  }
-})();
-</script>
 </body>
 </html>
